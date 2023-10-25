@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import {
-  GetDataFromLocalStorage,
-  SaveDataToLocalStorage,
+  getDataFromLocalStorage,
+  saveDataToLocalStorage,
 } from "../../utils/utils";
 import { toast } from "react-toastify";
 
 export default function DemoSaveDataLocalStorage() {
   const [value, setValue] = useState<string>("Data");
   const handleClickButton = () => {
-    if (!GetDataFromLocalStorage()) {
-      SaveDataToLocalStorage(value);
+    if (!getDataFromLocalStorage()) {
+      saveDataToLocalStorage(value);
       toast.success("Lưu data vào LocalStorage thành công!", {
         autoClose: 2000,
       });
