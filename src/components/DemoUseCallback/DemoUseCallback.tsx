@@ -8,7 +8,7 @@ export default function DemoUseCallback() {
     setValue((prev) => prev + 1);
   }, []);
   return (
-    <div className="bg-white p-10 rounded text-gray-700">
+    <div className="bg-white p-10 rounded text-gray-700 mt-5">
       <h2 className="text-xl">Demo useCallback + React.memo</h2>
       <div className=" grid grid-cols-2 gap-5 mt-2">
         <div className="col-span-2 md:col-span-1">
