@@ -4,22 +4,22 @@ const initalState = 0;
 
 type ActionType = {
   type: string;
-  payload?: number;
+  payload: number;
 };
 
 function reducer(state: number, action: ActionType) {
   switch (action.type) {
     case "incresement": {
-      return state + 1;
+      return state + action.payload;
     }
     case "incresement2": {
-      return state + 2;
+      return state + action.payload;
     }
     case "decreasement": {
-      return state - 1;
+      return state - action.payload;
     }
     case "decreasement3": {
-      return state - 3;
+      return state - action.payload;
     }
     default: {
       throw new Error("Invalid action!!!");
@@ -35,7 +35,7 @@ export default function DemoUseReducer() {
       <div className="mt-2">
         <button
           className="p-2 border-[2px] inline-block text-5xl font-bold border-r-0"
-          onClick={() => dispatch({ type: "decreasement" })}
+          onClick={() => dispatch({ type: "decreasement", payload: 1 })}
         >
           -
         </button>
@@ -44,7 +44,7 @@ export default function DemoUseReducer() {
         </span>
         <button
           className="p-2 border-[2px] inline-block text-5xl font-bold border-l-0"
-          onClick={() => dispatch({ type: "incresement" })}
+          onClick={() => dispatch({ type: "incresement", payload: 1 })}
         >
           +
         </button>
@@ -52,13 +52,13 @@ export default function DemoUseReducer() {
       <div className="mt-2">
         <button
           className="p-2 border-[2px] inline-block text-5xl font-bold mr-5"
-          onClick={() => dispatch({ type: "decreasement3" })}
+          onClick={() => dispatch({ type: "decreasement3", payload: 3 })}
         >
           -3
         </button>
         <button
           className="p-2 border-[2px] inline-block text-5xl font-bold"
-          onClick={() => dispatch({ type: "incresement2" })}
+          onClick={() => dispatch({ type: "incresement2", payload: 2 })}
         >
           +2
         </button>
