@@ -2,6 +2,7 @@ import "./App.css";
 import DemoSaveDataLocalStorage from "./components/DemoSaveDataLocalStorage";
 import DemoUseCallback from "./components/DemoUseCallback";
 import DemoUseMemo from "./components/DemoUseMemo";
+import DemoUseReducer from "./components/DemoUseReducer";
 import DemoUseRef from "./components/DemoUseRef";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <DemoUseCallback />
       <DemoSaveDataLocalStorage />
       <DemoUseRef />
+      <DemoUseReducer />
     </>
   );
 }
